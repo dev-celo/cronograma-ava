@@ -9,7 +9,7 @@ const rootElement = document.getElementById('root');
 if (rootElement) {
   createRoot(rootElement).render(
     <StrictMode>
-      <HashRouter basename="/cronograma-ava"> {/* ✅ Adicione o basename aqui */}
+      <HashRouter basename="/"> {/* ✅ Adicione o basename aqui */}
         <App />
       </HashRouter>
     </StrictMode>
