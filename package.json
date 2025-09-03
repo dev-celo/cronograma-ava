@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://dev-celo.github.io/cronograma-ava/",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
