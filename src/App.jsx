@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+// @ts-expect-error → Ignora a próxima linha e obriga você a ter certeza que queria ignorar
+
 import React, { useState, useEffect } from "react";
 import cronogramaJson from "./cronograma.json";
 import {
