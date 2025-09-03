@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+/* Variáveis globais */
+:root {
+  --color-bg-light: #f9fafb;
+  --color-bg-dark: #1e293b;
+  --color-text-light: #1f2937;
+  --color-text-dark: #f9fafb;
+  --color-primary: #2563eb;
+  --color-secondary: #3b82f6;
+
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Reset básico */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--color-bg-light);
+  color: var(--color-text-light);
+  @apply transition-colors duration-300;
+}
+
+/* Dark mode automático */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--color-bg-dark);
+    color: var(--color-text-dark);
+  }
+}
+
+/* Links */
+a {
+  font-weight: 500;
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+a:hover {
+  color: var(--color-secondary);
+}
+
+/* Títulos */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  color: var(--color-text-light);
+  @apply tracking-tight;
+}
+@media (prefers-color-scheme: dark) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--color-text-dark);
+  }
+}
+
+/* Botões */
+button {
+  @apply rounded-xl px-4 py-2 font-medium shadow-sm transition 
+         bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400;
+}
+button:disabled {
+  @apply opacity-50 cursor-not-allowed;
+}
+
+/* Inputs */
+input, textarea, select {
+  @apply border rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-300;
+}
+
+/* Cards */
+.card {
+  @apply bg-white dark:bg-slate-800 shadow-lg rounded-2xl p-6 transition;
+}
